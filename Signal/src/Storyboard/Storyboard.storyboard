@@ -1349,6 +1349,96 @@ A0 09 9A FF A8 8A 09 99</string>
             </objects>
             <point key="canvasLocation" x="-4372" y="-1537.8599999999999"/>
         </scene>
+        <!--Linked Devices-->
+        <scene sceneID="R59-ey-Ucx">
+            <objects>
+                <tableViewController id="euf-gj-Iag" customClass="OWSLinkedDevicesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="zqK-o2-Psk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ExistingDevice" rowHeight="72" id="XjV-oU-jSb" customClass="OWSDeviceTableViewCell">
+                                <rect key="frame" x="0.0" y="113.5" width="320" height="72"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XjV-oU-jSb" id="XqL-QG-IbY">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="71.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" misplaced="YES" text="Signal on Chrome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57o-uV-YOg">
+                                            <rect key="frame" x="17" y="8" width="129" height="20"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" misplaced="YES" text="Linked: Jun 12, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uL2-wj-OZr">
+                                            <rect key="frame" x="17" y="28" width="116" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" ambiguous="YES" text="Last Seen: Aug 25, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kek-MK-oLy">
+                                            <rect key="frame" x="17" y="48.5" width="138" height="14.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Kek-MK-oLy" secondAttribute="bottom" id="5Wg-pN-nfp"/>
+                                        <constraint firstItem="57o-uV-YOg" firstAttribute="leading" secondItem="XqL-QG-IbY" secondAttribute="leadingMargin" constant="9" id="7T0-ym-8gM"/>
+                                        <constraint firstItem="uL2-wj-OZr" firstAttribute="top" secondItem="57o-uV-YOg" secondAttribute="bottom" id="7dw-uu-TZK"/>
+                                        <constraint firstItem="Kek-MK-oLy" firstAttribute="top" secondItem="uL2-wj-OZr" secondAttribute="bottom" id="CPN-Tu-AVN"/>
+                                        <constraint firstItem="Kek-MK-oLy" firstAttribute="leading" secondItem="57o-uV-YOg" secondAttribute="leading" id="JEA-wB-KbQ"/>
+                                        <constraint firstItem="uL2-wj-OZr" firstAttribute="leading" secondItem="57o-uV-YOg" secondAttribute="leading" id="T5V-13-qDK"/>
+                                        <constraint firstItem="57o-uV-YOg" firstAttribute="top" secondItem="XqL-QG-IbY" secondAttribute="topMargin" id="asn-zh-Ubj"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lastSeenLabel" destination="Kek-MK-oLy" id="hnT-Gu-wAF"/>
+                                    <outlet property="linkedLabel" destination="uL2-wj-OZr" id="XoU-iO-eDe"/>
+                                    <outlet property="nameLabel" destination="57o-uV-YOg" id="yZG-PJ-JOY"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AddNewDevice" textLabel="w80-IJ-E6R" detailTextLabel="8ft-2u-wBF" style="IBUITableViewCellStyleSubtitle" id="6h2-gg-1C6">
+                                <rect key="frame" x="0.0" y="185.5" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6h2-gg-1C6" id="RKi-c6-pzb">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Link New Device" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w80-IJ-E6R">
+                                            <rect key="frame" x="15" y="5" width="120.5" height="19.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Scan QR Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8ft-2u-wBF">
+                                            <rect key="frame" x="15" y="24.5" width="82" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tWr-1v-Sq9" kind="push" id="23M-9X-9xV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="euf-gj-Iag" id="R6C-wt-F6o"/>
+                            <outlet property="delegate" destination="euf-gj-Iag" id="Smu-kk-c7F"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Linked Devices" id="HAh-b7-E4Q"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUY-HM-TQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2400" y="-3228"/>
+        </scene>
         <!--_7.0 - Settings-->
         <scene sceneID="BD7-1h-slc">
             <objects>
@@ -1451,7 +1541,7 @@ A0 09 9A FF A8 8A 09 99</string>
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1468,7 +1558,7 @@ A0 09 9A FF A8 8A 09 99</string>
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1485,13 +1575,13 @@ A0 09 9A FF A8 8A 09 99</string>
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="tWr-1v-Sq9" kind="push" id="LTQ-a4-Xbb"/>
+                                            <segue destination="euf-gj-Iag" kind="push" id="Mpp-7k-YTc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="dkL-Nz-E6H" style="IBUITableViewCellStyleDefault" id="Xx7-pz-aLN" userLabel="Advanced Cell">
@@ -1505,7 +1595,7 @@ A0 09 9A FF A8 8A 09 99</string>
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1522,7 +1612,7 @@ A0 09 9A FF A8 8A 09 99</string>
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1615,7 +1705,7 @@ A0 09 9A FF A8 8A 09 99</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPR-Bk-TZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2415" y="-3154"/>
+            <point key="canvasLocation" x="-2023" y="-3228"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aWR-d3-s5V">
@@ -1708,10 +1798,10 @@ A0 09 9A FF A8 8A 09 99</string>
                         <viewControllerLayoutGuide type="bottom" id="kH6-9L-pzh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="P0X-AM-Yjw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ukg-om-VX3" userLabel="Group Details">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ukg-om-VX3" userLabel="Group Details">
                                 <rect key="frame" x="0.0" y="20" width="320" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ul8-NY-i4c">
@@ -1746,7 +1836,7 @@ A0 09 9A FF A8 8A 09 99</string>
                                     <constraint firstItem="gbm-B5-gCc" firstAttribute="leading" secondItem="Ul8-NY-i4c" secondAttribute="trailing" constant="18" id="yn3-rt-mGC"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cFo-AT-Srf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cFo-AT-Srf">
                                 <rect key="frame" x="0.0" y="128" width="320" height="440"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="ekO-kw-iHV" userLabel="Header View">
@@ -1864,7 +1954,7 @@ A0 09 9A FF A8 8A 09 99</string>
         <image name="speaker-inactive" width="80" height="80"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="D0d-4f-lcI"/>
         <segue reference="xo7-5J-BJb"/>
-        <segue reference="gZ1-lh-srF"/>
     </inferredMetricsTieBreakers>
 </document>
